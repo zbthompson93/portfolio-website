@@ -1,13 +1,13 @@
 #summary {
-    width: 80%;
-    margin: auto;
-    position: relative;
-    font-size: 18px;
+  width: 80%;
+  margin: auto;
+  position: relative;
+  font-size: 18px;
 }
 
 #profilePic {
-    height: 150px;
-    width: 150px;
-    float: left;
-    margin: 5px;
+  height: 150px;
+  width: 150px;
+  float: left;
+  margin: 5px;
 }

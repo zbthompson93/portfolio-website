@@ -7,7 +7,7 @@ import Summary from './Summary/Summary';
 function App() {
   return (
     <div>
-      <NavBar name={"ZT"} />
+      <NavBar />
       <HeaderImage />
       <Summary />
     </div>

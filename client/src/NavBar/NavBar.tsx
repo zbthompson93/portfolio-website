@@ -5,7 +5,7 @@ import Icon from '@mui/material/Icon';
 import Typography from '@mui/material/Typography';
 import image from '../images/zt-logo-1.svg'
 
-export default function NavBar(props) {
+export default function NavBar() {
     //let navigate = useNavigate();
 
     return (

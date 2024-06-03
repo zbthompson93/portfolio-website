@@ -7,11 +7,11 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent'
 
-export default function Summary(props) {
+export default function Summary() {
     //let navigate = useNavigate();
 
     return (
-        <Container sx={{ width: "100%"}} maxWidth='false'>
+        <Container sx={{ width: "100%"}} maxWidth={false}>
             <Card sx={{ width: "100%" }}>
                 <Box id="summary">
                     {/* <CardMedia
@@ -42,7 +42,7 @@ export default function Summary(props) {
                             />
                         </div>
                         
-                        <p textAlign="justify" >
+                        <p style={{textAlign: 'justify'}} >
                         
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nullam vehicula ipsum a arcu cursus. Proin nibh nisl condimentum id. Elit sed vulputate mi sit amet mauris commodo quis. Ut diam quam nulla porttitor massa id neque. Pretium lectus quam id leo in vitae turpis massa. In hac habitasse platea dictumst quisque sagittis purus. Pellentesque habitant morbi tristique senectus et netus et. Tortor consequat id porta nibh venenatis cras sed felis eget. Volutpat commodo sed egestas egestas. Integer vitae justo eget magna fermentum iaculis eu non diam. Semper auctor neque vitae tempus quam pellentesque. Luctus venenatis lectus magna fringilla. Sed sed risus pretium quam vulputate dignissim. Et malesuada fames ac turpis. Dictum at tempor commodo ullamcorper a lacus vestibulum sed arcu. Malesuada pellentesque elit eget gravida cum sociis natoque.
 

@@ -11,7 +11,7 @@ import CardContent from '@mui/material/CardContent';
 
 
 export default function Portfolio() {
-    const [showDesc, setShowDesc] = useState(null);
+    const [showDesc, setShowDesc] = useState<boolean[]>([]);
 
     const projects: {title: string, desc: string, img: string}[] = [
         {title: 'Test Project', desc: 'The best project ever', img: image},
@@ -29,6 +29,10 @@ export default function Portfolio() {
         setShowDesc(newDescState);
     }, [])
 
+    useEffect((): void => {
+        console.log("Show Desc:" + showDesc)
+    }, [showDesc])
+
 
     return (
         <Container sx={{ width: "80%", fontSize: '24px', marginTop: '30px'}} maxWidth={false}>
@@ -36,19 +40,22 @@ export default function Portfolio() {
             <Box display="flex" gap={5} sx={{flex: '1 0 0', flexWrap: 'wrap', justifyContent: 'center'}} >
                 {projects.map((project, i) => {
                     return(
-                        <Card 
+                        <Card
+                            key={i} 
                             sx={{backgroundColor: '#d3d3d3', maxWidth: 300}} 
                             onMouseEnter={() => { 
-                                let newShowDesc = showDesc;
+                                let newShowDesc = [...showDesc];
 
-                                newShowDesc !== null ? newShowDesc[i] = true : null;  
+                                newShowDesc[i] = true; 
+                                //console.log('newShowDesc:' + newShowDesc[i]);
                                 setShowDesc(newShowDesc)
                             }} 
                             onMouseLeave={() => { 
-                                let newShowDesc = showDesc;
-                                newShowDesc !== null ? newShowDesc[i] = false: null;  
-                                setShowDesc(newShowDesc)}
-                            }
+                                let newShowDesc = [...showDesc];
+                                newShowDesc[i] = false;
+                                //console.log('newShowDesc:' + newShowDesc[i]);
+                                setShowDesc(newShowDesc)
+                            }}
                         >
                             <CardHeader
                                 title={project.title}
@@ -59,11 +66,13 @@ export default function Portfolio() {
                                 width='150'
                                 image={project.img}
                             />
-                            <CardContent sx={{display: showDesc ? 'block' : 'none'}}>
-                                <Typography variant="body2">
-                                    {project.desc}
-                                </Typography> 
-                            </CardContent> 
+                            {showDesc[i] &&
+                                <CardContent>
+                                    <Typography variant="body2">
+                                        {project.desc}
+                                    </Typography> 
+                                </CardContent>
+                            }
                         </Card>
                     )
                 })}

@@ -11,7 +11,7 @@ import CardContent from '@mui/material/CardContent';
 
 
 export default function Portfolio() {
-    const [showDesc, setShowDesc] = useState<boolean[]>([]);
+    const [showDesc, setShowDesc] = useState<{ [key: string]: boolean }>({});
 
     const projects: {title: string, desc: string, img: string}[] = [
         {title: 'Test Project', desc: 'The best project ever', img: image},
@@ -22,15 +22,24 @@ export default function Portfolio() {
     ]
 
     useEffect((): void => {
-        let newDescState: boolean[] = projects.map((project) =>{
+        let testObj: { [key: string]: boolean } = {};
+        let newDescState: boolean[] = projects.map((project, i: number) =>{
+            let id: string = 'id_' + i;
+            testObj = {
+                ...testObj,
+                [id]: false
+            };
+            console.log("testObj:" + JSON.stringify(testObj))
             return false;
         })
 
-        setShowDesc(newDescState);
+        
+
+        setShowDesc(testObj);
     }, [])
 
     useEffect((): void => {
-        console.log("Show Desc:" + showDesc)
+        console.log("Show Desc:" + JSON.stringify(showDesc))
     }, [showDesc])
 
 
@@ -43,16 +52,22 @@ export default function Portfolio() {
                         <Card
                             key={i} 
                             sx={{backgroundColor: '#d3d3d3', maxWidth: 300}} 
-                            onMouseEnter={() => { 
-                                let newShowDesc = [...showDesc];
+                            onMouseEnter={() => {
+                                let id: string = 'id_' + i;
+                                // testObj = {
+                                //     ...testObj,
+                                //     [id]: false
+                                // };
+                                let newShowDesc = {...showDesc};
 
-                                newShowDesc[i] = true; 
+                                newShowDesc[id] = true; 
                                 //console.log('newShowDesc:' + newShowDesc[i]);
                                 setShowDesc(newShowDesc)
                             }} 
-                            onMouseLeave={() => { 
-                                let newShowDesc = [...showDesc];
-                                newShowDesc[i] = false;
+                            onMouseLeave={() => {
+                                let id: string = 'id_' + i;
+                                let newShowDesc = {...showDesc};
+                                newShowDesc[id] = false;
                                 //console.log('newShowDesc:' + newShowDesc[i]);
                                 setShowDesc(newShowDesc)
                             }}
@@ -66,7 +81,7 @@ export default function Portfolio() {
                                 width='150'
                                 image={project.img}
                             />
-                            {showDesc[i] &&
+                            {showDesc['id_' + i] &&
                                 <CardContent>
                                     <Typography variant="body2">
                                         {project.desc}

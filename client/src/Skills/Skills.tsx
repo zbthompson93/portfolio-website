@@ -17,10 +17,10 @@ export default function Skills() {
 
     let skillsList: {name: string, icon: ReactElement}[];
     skillsList = [
-        {name: "JavaScript", icon: <JavascriptIcon fontSize='large' color='primary' />},
-        {name: "HTML", icon: <CodeIcon fontSize='large' color='primary' />},
-        {name: "CSS", icon: <CssIcon fontSize='large' color='primary' />},
-        {name: "Git/GitHub", icon: <GitHubIcon fontSize='large' color='primary' />},
+        {name: "JavaScript", icon: <JavascriptIcon fontSize='medium' color='primary' />},
+        {name: "HTML", icon: <CodeIcon fontSize='medium' color='primary' />},
+        {name: "CSS", icon: <CssIcon fontSize='medium' color='primary' />},
+        {name: "Git/GitHub", icon: <GitHubIcon fontSize='medium' color='primary' />},
     ];
 
     return (
@@ -36,13 +36,6 @@ export default function Skills() {
                 )
             })}
             </Stack>
-            
-                
-                
-            
         </Container>
     );
   }
-
-
-  //<Chip icon={<FaceIcon />} label="With Icon" variant="outlined" />

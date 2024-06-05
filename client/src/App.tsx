@@ -5,6 +5,7 @@ import HeaderImage from './HeaderImage/HeaderImage';
 import Summary from './Summary/Summary';
 import Skills from './Skills/Skills';
 import Portfolio from './Portfolio/Portfolio';
+import Experience from './Experience/Experience';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Summary />
       <Skills />
       <Portfolio />
+      <Experience />
     </div>
   );
 }

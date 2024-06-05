@@ -8,7 +8,7 @@ import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
-import Link from '@mui/material/Link';
+import type { FC, ReactElement } from "react";
 
 
 
@@ -49,7 +49,7 @@ export default function Portfolio() {
         <Container sx={{ width: "80%", fontSize: '24px', marginTop: '30px'}} maxWidth={false}>
             <Typography variant='h3'>Portfolio</Typography>
             <Box display="flex" gap={5} sx={{flex: '1 0 0', flexWrap: 'wrap', justifyContent: 'center'}} >
-                {projects.map((project, i) => {
+                {projects.map((project, i): ReactElement => {
                     return(
                         <Card
                             key={i} 

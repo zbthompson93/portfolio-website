@@ -8,18 +8,19 @@ import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
+import Link from '@mui/material/Link';
 
 
 
 export default function Portfolio() {
     const [showDesc, setShowDesc] = useState<{ [key: string]: boolean }>({});
 
-    const projects: {title: string, desc: string, img: string}[] = [
-        {title: 'Test Project', desc: 'The best project ever', img: image},
-        {title: 'Test Project 2', desc: 'The second best project ever', img: image},
-        {title: 'Test Project 3', desc: 'The third best project ever', img: image},
-        {title: 'Test Project 4', desc: 'The fourth best project ever', img: image},
-        {title: 'Test Project 5', desc: 'The fifth best project ever', img: image}
+    const projects: {title: string, desc: string, img: string, link: string}[] = [
+        {title: 'Test Project', desc: 'The best project ever', img: image, link: 'https://www.google.com/'},
+        {title: 'Test Project 2', desc: 'The second best project ever', img: image, link: ''},
+        {title: 'Test Project 3', desc: 'The third best project ever', img: image, link: ''},
+        {title: 'Test Project 4', desc: 'The fourth best project ever', img: image, link: ''},
+        {title: 'Test Project 5', desc: 'The fifth best project ever', img: image, link: ''}
     ]
 
     useEffect((): void => {
@@ -71,15 +72,25 @@ export default function Portfolio() {
                                 }}
                             >
                                 {showDesc['id_' + i] && 
-                                    <Button
-                                        className='project-btn'
-                                        color='primary'
-                                        size='medium'
-                                        variant='contained'
-                                        sx={{zIndex: 5}}
-                                    >
-                                        {project.title}
-                                    </Button>
+                                    <div className='project-btn' style={{zIndex: 5}}>
+                                        <Typography 
+                                            variant='h6' 
+                                            sx={{color: '#fff'}}
+                                        >
+                                            {project.desc}
+                                        </Typography>
+                                        <Button
+                                            // className='project-btn'
+                                            color='primary'
+                                            size='medium'
+                                            variant='contained'
+                                            sx={{zIndex: 5}}
+                                            href={project.link}
+                                            target='_blank'
+                                        >
+                                            Visit Website
+                                        </Button>
+                                    </div>
                                 }
                                 <div style={{backgroundColor: '#000'}}>
                                     <CardMedia

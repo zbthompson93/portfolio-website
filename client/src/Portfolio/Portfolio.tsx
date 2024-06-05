@@ -7,6 +7,7 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
 
 
 
@@ -51,43 +52,45 @@ export default function Portfolio() {
                     return(
                         <Card
                             key={i} 
-                            sx={{backgroundColor: '#d3d3d3', maxWidth: 300}} 
-                            onMouseEnter={() => {
-                                let id: string = 'id_' + i;
-                                // testObj = {
-                                //     ...testObj,
-                                //     [id]: false
-                                // };
-                                let newShowDesc = {...showDesc};
-
-                                newShowDesc[id] = true; 
-                                //console.log('newShowDesc:' + newShowDesc[i]);
-                                setShowDesc(newShowDesc)
-                            }} 
-                            onMouseLeave={() => {
-                                let id: string = 'id_' + i;
-                                let newShowDesc = {...showDesc};
-                                newShowDesc[id] = false;
-                                //console.log('newShowDesc:' + newShowDesc[i]);
-                                setShowDesc(newShowDesc)
-                            }}
+                            sx={{maxWidth: 300}} 
+                            
                         >
-                            <CardHeader
-                                title={project.title}
-                            />
-                            <CardMedia
-                                component="img"
-                                height='150'
-                                width='150'
-                                image={project.img}
-                            />
-                            {showDesc['id_' + i] &&
-                                <CardContent>
-                                    <Typography variant="body2">
-                                        {project.desc}
-                                    </Typography> 
-                                </CardContent>
-                            }
+                            <div 
+                                className='project-container'
+                                onMouseEnter={() => {
+                                    let id: string = 'id_' + i;
+                                    let newShowDesc = {...showDesc};
+                                    newShowDesc[id] = true; 
+                                    setShowDesc(newShowDesc)
+                                }} 
+                                onMouseLeave={() => {
+                                    let id: string = 'id_' + i;
+                                    let newShowDesc = {...showDesc};
+                                    newShowDesc[id] = false;
+                                    setShowDesc(newShowDesc)
+                                }}
+                            >
+                                {showDesc['id_' + i] && 
+                                    <Button
+                                        className='project-btn'
+                                        color='primary'
+                                        size='medium'
+                                        variant='contained'
+                                        sx={{zIndex: 5}}
+                                    >
+                                        {project.title}
+                                    </Button>
+                                }
+                                <div style={{backgroundColor: '#000'}}>
+                                    <CardMedia
+                                        component="img"
+                                        height='200'
+                                        width='150'
+                                        image={project.img}
+                                        sx={{opacity: showDesc['id_' + i] ? '0.5' : '1'}}
+                                    />
+                                </div>
+                            </div>
                         </Card>
                     )
                 })}

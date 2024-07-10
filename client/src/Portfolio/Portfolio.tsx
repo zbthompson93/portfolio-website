@@ -9,7 +9,8 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import type { FC, ReactElement } from "react";
-import brewImage from '../images/brewing-calculations-photo.png'
+import brewImage from '../images/brewing-calculations-photo.png';
+import ristraImage from '../images/ristra-img.png';
 
 
 
@@ -23,7 +24,12 @@ export default function Portfolio() {
             img: brewImage, 
             link: 'https://zbthompson93.github.io/brewing-calculations/'
         },
-        {title: 'Test Project 2', desc: 'The second best project ever', img: image, link: ''},
+        {
+            title: 'Ristra Restaurant Review', 
+            desc: 'A web app that has reviews of local restaurants. Similar to Yelp.', 
+            img: ristraImage, 
+            link: 'https://github.com/zbthompson93/ristra-frontend'
+        },
         {title: 'Test Project 3', desc: 'The third best project ever', img: image, link: ''},
         {title: 'Test Project 4', desc: 'The fourth best project ever', img: image, link: ''},
         {title: 'Test Project 5', desc: 'The fifth best project ever', img: image, link: ''}

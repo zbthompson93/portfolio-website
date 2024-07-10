@@ -9,6 +9,7 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import type { FC, ReactElement } from "react";
+import brewImage from '../images/brewing-calculations-photo.png'
 
 
 
@@ -16,7 +17,12 @@ export default function Portfolio() {
     const [showDesc, setShowDesc] = useState<{ [key: string]: boolean }>({});
 
     const projects: {title: string, desc: string, img: string, link: string}[] = [
-        {title: 'Test Project', desc: 'The best project ever', img: image, link: 'https://www.google.com/'},
+        {
+            title: 'Brewing Calculations', 
+            desc: 'A simple web page that calculates information needed for homebrewing beer', 
+            img: brewImage, 
+            link: 'https://zbthompson93.github.io/brewing-calculations/'
+        },
         {title: 'Test Project 2', desc: 'The second best project ever', img: image, link: ''},
         {title: 'Test Project 3', desc: 'The third best project ever', img: image, link: ''},
         {title: 'Test Project 4', desc: 'The fourth best project ever', img: image, link: ''},
@@ -74,8 +80,8 @@ export default function Portfolio() {
                                 {showDesc['id_' + i] && 
                                     <div className='project-btn' style={{zIndex: 5}}>
                                         <Typography 
-                                            variant='h6' 
-                                            sx={{color: '#fff'}}
+                                            variant='body1' 
+                                            sx={{color: '#fff', marginBottom: '10px'}}
                                         >
                                             {project.desc}
                                         </Typography>

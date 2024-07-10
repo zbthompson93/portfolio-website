@@ -32,12 +32,20 @@ export default function Experience() {
 
     const experiences: experience[] = [
         {
-                title: 'Software Engineer', 
-                company: 'Service Point Pro', 
-                icon: image, 
-                desc: 'test', 
-                accomplishments: ['1', '2'],
-                link: 'https://www.google.com/'
+            title: 'Web Developer', 
+            company: 'CAE', 
+            icon: image, 
+            desc: 'test', 
+            accomplishments: ['1', '2'],
+            link: 'https://www.google.com/'
+        },
+        {
+            title: 'Software Engineer', 
+            company: 'Service Point Pro', 
+            icon: image, 
+            desc: 'test', 
+            accomplishments: ['1', '2'],
+            link: 'https://www.google.com/'
         },
         {
             title: 'Web Developer', 

@@ -16,6 +16,8 @@ function App() {
       <Skills />
       <Portfolio />
       <Experience />
+
+      <div style={{width: '100%', height: 300}}></div>
     </div>
   );
 }

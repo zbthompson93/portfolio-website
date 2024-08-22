@@ -30,9 +30,9 @@ export default function Portfolio() {
             img: ristraImage, 
             link: 'https://github.com/zbthompson93/ristra-frontend'
         },
-        {title: 'Test Project 3', desc: 'The third best project ever', img: image, link: ''},
-        {title: 'Test Project 4', desc: 'The fourth best project ever', img: image, link: ''},
-        {title: 'Test Project 5', desc: 'The fifth best project ever', img: image, link: ''}
+        // {title: 'Test Project 3', desc: 'The third best project ever', img: image, link: ''},
+        // {title: 'Test Project 4', desc: 'The fourth best project ever', img: image, link: ''},
+        // {title: 'Test Project 5', desc: 'The fifth best project ever', img: image, link: ''}
     ]
 
     useEffect((): void => {
@@ -60,7 +60,7 @@ export default function Portfolio() {
     return (
         <Container sx={{ width: "80%", fontSize: '24px', marginTop: '30px'}} maxWidth={false}>
             <Typography variant='h3'>Portfolio</Typography>
-            <Box display="flex" gap={5} sx={{flex: '1 0 0', flexWrap: 'wrap', justifyContent: 'center'}} >
+            <Box display="flex" gap={5} sx={{flex: '1 0 0', flexWrap: 'wrap', justifyContent: 'left'}} >
                 {projects.map((project, i): ReactElement => {
                     return(
                         <Card

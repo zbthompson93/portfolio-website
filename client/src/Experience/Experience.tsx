@@ -22,7 +22,9 @@ interface experience {
     icon: string, 
     desc: string, 
     accomplishments: string[], 
-    link: string
+    link: string,
+    location: string,
+    years: string
 }
 
 
@@ -33,35 +35,50 @@ export default function Experience() {
     const experiences: experience[] = [
         {
             title: 'Web Developer', 
-            company: 'CAE', 
+            company: 'KDAM ATARS', 
             icon: image, 
-            desc: 'test', 
-            accomplishments: ['1', '2'],
-            link: 'https://www.google.com/'
+            desc: 'KDAM ATARS designs and creates courseware for training aircraft personnel.', 
+            accomplishments: [
+                'Develops courseware using modern web technologies.',
+                'Collaborates with SMEs, graphic artists, and others as directed to design and develop computer-aided instruction and mediated interactive lecture lessons.'
+            ],
+            link: 'https://www.google.com/',
+            location: 'Albuquerque, NM',
+            years: '2024-present'
         },
         {
             title: 'Software Engineer', 
             company: 'Service Point Pro', 
             icon: image, 
-            desc: 'test', 
-            accomplishments: ['1', '2'],
-            link: 'https://www.google.com/'
+            desc: 'Service Point Pro is a Field Service Application for techs in HVAC, Plumbing, and other related fields.', 
+            accomplishments: [
+                'Strengthened the functionality of a Field Service Management app by building custom components React JS and Redux.',
+                'Enhanced the UX of the app by making popup windows draggable, dockable,  and minimizable.',
+                'Fixed numerous bugs quickly to stabilize the performance of the app.',
+                'Mentored junior software engineers on the team and advanced their knowledge and abilities.',
+                'Propelled proper testing for the development team by implementing a Quality Assurance process that follows Agile development methods.',
+                'Boosted the code quality of large React components and split them into smaller, more manageable components.'
+            ],
+            link: 'https://www.google.com/',
+            location: 'Albuquerque, NM',
+            years: '2022-2023'
         },
         {
             title: 'Web Developer', 
             company: 'Northwestern Mutual', 
             icon: image, 
-            desc: 'test',
-            accomplishments: ['1', '2'], 
-            link: ''
-        },
-        {
-            title: 'Freelance Web Developer', 
-            company: 'Self-Employed', 
-            icon: image, 
-            desc: 'test',
-            accomplishments: ['1', '2'], 
-            link: ''
+            desc: 'Northwestern Mutual provides life insurance and financial advice for people around the United States.',
+            accomplishments: [
+                'Enhanced the UI and UX of Northwestern Mutual’s Help Center by using modern web development techniques and standards.',
+                'Collaborated with the design team by turning designs into functioning and responsive web pages and applications.',
+                'Maximized customers’ workflow efficiency by building custom functionality within customer applications.',
+                'Built custom apps in Northwestern Mutual’s ticketing Support site using React JS  to advance the ticket-solving process for support engineers.',
+                'Generated easy-to-read reporting files by using Python to build reports based on the backend API data of the application.',
+                'Customized AWS microservices to make development easier for the Help Center and custom support apps.'
+            ], 
+            link: '',
+            location: 'Milwaukee, WI',
+            years: '2018-2022'
         },
     ]
 
@@ -75,12 +92,23 @@ export default function Experience() {
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls="panel1-content"
-                                id="panel1-header"
+                                id="experience-header"
                             >
-                                {experience.title} - {experience.company}
+                                <div style={{flex: 1}}>
+                                    <p>{experience.title}</p>
+                                    <p>{experience.company}</p>
+                                </div>
+                                <div style={{marginRight: 15, textAlign: 'right', fontSize: 20, lineHeight: '32px'}}>
+                                    <p>{experience.location}</p>
+                                    <p>{experience.years}</p>
+                                </div>
                             </AccordionSummary>
-                            <AccordionDetails>
-                                {experience.desc}
+                            <AccordionDetails style={{fontSize: 20}}>
+                                {experience.accomplishments.map((accomplishment): ReactElement => {
+                                    return (
+                                        <li>{accomplishment}</li>
+                                    )
+                                })}
                             </AccordionDetails>
                         </Accordion>
                     )

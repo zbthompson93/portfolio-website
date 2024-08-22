@@ -19,7 +19,7 @@ export default function HeaderImage() {
             </Box> */}
 
             <Card sx={{ width: "100%" }}>
-                <Box sx={{ position: 'relative', height: '70vh', overflow: 'hidden' }}>
+                <Box sx={{ position: 'relative', height: '50vh', overflow: 'hidden' }}>
                     <CardMedia
                         component="img"
                         height="100%"

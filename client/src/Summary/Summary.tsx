@@ -43,10 +43,7 @@ export default function Summary() {
                         </div>
                         
                         <p style={{textAlign: 'justify'}} >
-                        
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nullam vehicula ipsum a arcu cursus. Proin nibh nisl condimentum id. Elit sed vulputate mi sit amet mauris commodo quis. Ut diam quam nulla porttitor massa id neque. Pretium lectus quam id leo in vitae turpis massa. In hac habitasse platea dictumst quisque sagittis purus. Pellentesque habitant morbi tristique senectus et netus et. Tortor consequat id porta nibh venenatis cras sed felis eget. Volutpat commodo sed egestas egestas. Integer vitae justo eget magna fermentum iaculis eu non diam. Semper auctor neque vitae tempus quam pellentesque. Luctus venenatis lectus magna fringilla. Sed sed risus pretium quam vulputate dignissim. Et malesuada fames ac turpis. Dictum at tempor commodo ullamcorper a lacus vestibulum sed arcu. Malesuada pellentesque elit eget gravida cum sociis natoque.
-
-Semper risus in hendrerit gravida rutrum quisque. Massa tempor nec feugiat nisl pretium fusce. Diam phasellus vestibulum lorem sed risus ultricies. Consequat ac felis donec et odio pellentesque diam volutpat commodo. Enim neque volutpat ac tincidunt. Diam quam nulla porttitor massa id neque. Ultrices in iaculis nunc sed augue. Curabitur gravida arcu ac tortor dignissim convallis aenean et. Egestas egestas fringilla phasellus faucibus scelerisque eleifend. Sed viverra ipsum nunc aliquet bibendum enim facilisis. Enim blandit volutpat maecenas volutpat blandit. Rhoncus dolor purus non enim. Nisi scelerisque eu ultrices vitae auctor eu augue ut.
+                            Determined, motivated, and team-oriented individual with a passion for problem solving. Has 5 years of experience with front-end web development. Proficient in many front-end technologies including HTML, CSS, JavaScript, React.js, Redux, Git, JSON, and REST APIs.
                         </p>
                         </div>
                     </CardContent>

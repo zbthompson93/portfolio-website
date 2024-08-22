@@ -83,8 +83,8 @@ export default function Experience() {
     ]
 
     return (
-        <Container sx={{ width: "80%", fontSize: '24px', marginTop: '30px'}} maxWidth={false}>
-            <Typography variant='h3'>Experience</Typography>
+        <Container sx={{ width: "80%", fontSize: '24px', marginTop: '50px'}} maxWidth={false}>
+            <Typography variant='h3' className='section-title'>Experience</Typography>
             <div>
                 {experiences.map((experience, i): ReactElement => {
                     return (

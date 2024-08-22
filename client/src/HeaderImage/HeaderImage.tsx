@@ -10,14 +10,7 @@ export default function HeaderImage() {
     //let navigate = useNavigate();
 
     return (
-        <Container sx={{ width: "100%", padding: '0 !important', maxHeight: '65vh', marginBottom: '30px'}} maxWidth={false}>
-            {/* <Box sx={{ height: '70vh', overflow: 'hidden'}}>
-                <img style={{width: "100%" }} src={image} />
-                <Typography variant="h1" component="div" sx={{ zIndex: 5}}>
-                    Zachary Thompson
-                </Typography>
-            </Box> */}
-
+        <Container sx={{ width: "100%", padding: '0 !important', maxHeight: '65vh', marginBottom: '50px'}} maxWidth={false}>
             <Card sx={{ width: "100%" }}>
                 <Box sx={{ position: 'relative', height: '50vh', overflow: 'hidden' }}>
                     <CardMedia

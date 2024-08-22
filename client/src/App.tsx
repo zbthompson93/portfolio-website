@@ -13,11 +13,11 @@ function App() {
       <NavBar />
       <HeaderImage />
       <Summary />
-      <Skills />
+      {/* <Skills /> */}
       <Portfolio />
       <Experience />
 
-      <div style={{width: '100%', height: 300}}></div>
+      <div style={{width: '100%', height: 200}}></div>
     </div>
   );
 }

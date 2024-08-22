@@ -58,8 +58,8 @@ export default function Portfolio() {
 
 
     return (
-        <Container sx={{ width: "80%", fontSize: '24px', marginTop: '30px'}} maxWidth={false}>
-            <Typography variant='h3'>Portfolio</Typography>
+        <Container sx={{ width: "80%", fontSize: '24px', marginTop: '50px'}} maxWidth={false}>
+            <Typography variant='h3' className='section-title'>Portfolio</Typography>
             <Box display="flex" gap={5} sx={{flex: '1 0 0', flexWrap: 'wrap', justifyContent: 'left'}} >
                 {projects.map((project, i): ReactElement => {
                     return(

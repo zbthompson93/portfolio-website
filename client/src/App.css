@@ -4,7 +4,7 @@
 }
 
 #summary {
-  width: 80%;
+  width: 100%;
   margin: auto;
   position: relative;
   font-size: 18px;
@@ -13,14 +13,22 @@
 #profilePic {
   height: 150px;
   width: 150px;
-  float: left;
+  /* float: left; */
   margin: 5px;
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+}
+
+.section-title {
+  margin-bottom: 10px !important;
 }
 
 #skillsBox {
   width: 60%;
   margin: 20px auto;
   position: relative;
+  justify-content: center;
 }
 
 .project-container {

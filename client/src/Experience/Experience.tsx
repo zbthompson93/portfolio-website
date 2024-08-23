@@ -96,7 +96,7 @@ export default function Experience() {
                             >
                                 <div style={{flex: 1}}>
                                     <p>{experience.title}</p>
-                                    <p>{experience.company}</p>
+                                    <p style={{fontSize: 20}}>{experience.company}</p>
                                 </div>
                                 <div style={{marginRight: 15, textAlign: 'right', fontSize: 20, lineHeight: '32px'}}>
                                     <p>{experience.location}</p>

@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import type { FC, ReactElement } from "react";
 import brewImage from '../images/brewing-calculations-photo.png';
 import ristraImage from '../images/ristra-img.png';
+import htmlStock from '../images/html_stock_photp.jpeg';
 
 
 
@@ -30,8 +31,17 @@ export default function Portfolio() {
             img: ristraImage, 
             link: 'https://github.com/zbthompson93/ristra-frontend'
         },
-        // {title: 'Test Project 3', desc: 'The third best project ever', img: image, link: ''},
-        // {title: 'Test Project 4', desc: 'The fourth best project ever', img: image, link: ''},
+        {
+            title: 'Token Ibis Dashboard', 
+            desc: 'A dashboard that shows stats for the Token Ibis App.', 
+            img: '', 
+            link: 'https://github.com/zbthompson93/token-ibis-dashboard-public'
+        },
+        {
+            title: 'Todo App', 
+            desc: 'A simple todo app built using Django and React', 
+            img: '', 
+            link: 'https://github.com/zbthompson93/django-todo-react/tree/master'},
         // {title: 'Test Project 5', desc: 'The fifth best project ever', img: image, link: ''}
     ]
 
@@ -105,11 +115,24 @@ export default function Portfolio() {
                                     </div>
                                 }
                                 <div style={{backgroundColor: '#000'}}>
+                                    <Typography 
+                                            variant='body1' 
+                                            sx={{
+                                                color: '#fff', 
+                                                fontSize: 20,
+                                                padding: '5px',
+                                                textAlign: 'center',
+                                                background: '#929E62',
+                                                opacity: showDesc['id_' + i] ? '0.5' : '1'
+                                            }}
+                                        >
+                                            {project.title}
+                                    </Typography>
                                     <CardMedia
                                         component="img"
                                         height='200'
-                                        width='150'
-                                        image={project.img}
+                                        width='300'
+                                        image={project.img.length > 0 ? project.img : htmlStock}
                                         sx={{opacity: showDesc['id_' + i] ? '0.5' : '1'}}
                                     />
                                 </div>

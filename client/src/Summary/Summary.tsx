@@ -1,7 +1,7 @@
 //import { useNavigate } from 'react-router-dom';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import image from '../images/umstead_lake.jpg'
+import image from '../images/profile_photo.jpg'
 import { Typography } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';

@@ -10,7 +10,7 @@ import Experience from './Experience/Experience';
 function App() {
   return (
     <div className='App'>
-      <NavBar />
+      {/* <NavBar /> */}
       <HeaderImage />
       <Summary />
       {/* <Skills /> */}

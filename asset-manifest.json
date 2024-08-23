@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.f1627c47.css",
-    "main.js": "/portfolio-website/static/js/main.c8d867a2.js",
+    "main.css": "/portfolio-website/static/css/main.caa3962c.css",
+    "main.js": "/portfolio-website/static/js/main.a1cf7c48.js",
     "static/js/453.258b012d.chunk.js": "/portfolio-website/static/js/453.258b012d.chunk.js",
     "static/media/umstead_lake.jpg": "/portfolio-website/static/media/umstead_lake.4e8a1d35bd0e15148251.jpg",
+    "static/media/html_stock_photp.jpeg": "/portfolio-website/static/media/html_stock_photp.0e1228b0c466953ea5e8.jpeg",
     "static/media/brewing-calculations-photo.png": "/portfolio-website/static/media/brewing-calculations-photo.85172cdfaaef5764b612.png",
     "static/media/ristra-img.png": "/portfolio-website/static/media/ristra-img.1684ede25eb3dcba6298.png",
-    "static/media/zt-logo-1.svg": "/portfolio-website/static/media/zt-logo-1.f6af30d65fa9f2226d5ff5f6f9f5e3f6.svg",
+    "static/media/profile_photo.jpg": "/portfolio-website/static/media/profile_photo.ee7903a8d34dfa7e04f8.jpg",
     "index.html": "/portfolio-website/index.html",
-    "main.f1627c47.css.map": "/portfolio-website/static/css/main.f1627c47.css.map",
-    "main.c8d867a2.js.map": "/portfolio-website/static/js/main.c8d867a2.js.map",
+    "main.caa3962c.css.map": "/portfolio-website/static/css/main.caa3962c.css.map",
+    "main.a1cf7c48.js.map": "/portfolio-website/static/js/main.a1cf7c48.js.map",
     "453.258b012d.chunk.js.map": "/portfolio-website/static/js/453.258b012d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1627c47.css",
-    "static/js/main.c8d867a2.js"
+    "static/css/main.caa3962c.css",
+    "static/js/main.a1cf7c48.js"
   ]
 }
